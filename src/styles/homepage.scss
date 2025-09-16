@@ -1,0 +1,121 @@
+.home-container {
+    padding: 2rem;
+    position: relative;
+    min-height: 100vh;
+    background-color: #f5f7fa;
+
+    .loading,
+    .error {
+        font-size: 1.2rem;
+        text-align: center;
+        color: #666;
+        margin-top: 2rem;
+    }
+
+    .posts-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}
+
+.floating-button {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: #0ad346;
+    color: white;
+    // border-radius: 50px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(185, 217, 1, 0.3);
+    transition: all 0.3s ease;
+
+    .plus-icon {
+        font-size: 1.8rem;
+        font-weight: bold;
+    }
+
+    .button-text {
+        opacity: 0;
+        // width: 100%;
+        max-width: 0;
+        overflow: hidden;
+        white-space: nowrap;
+        transition: opacity 0.3s ease, max-width 0.3s ease;
+    }
+
+    &:hover {
+        // border-radius: 30px;
+
+        .button-text {
+            opacity: 1;
+            max-width: 200px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .floating-button {
+        padding: 0.75rem;
+
+        .button-text {
+            display: none;
+        }
+    }
+}
+
+.search-container {
+    width: 300px;
+    margin: auto;
+    text-align: center;
+
+    input {
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 1rem;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin-top: 10px;
+
+        li {
+            padding: 5px;
+            background: #f1f1f1;
+            margin: 5px 0;
+            border-radius: 3px;
+        }
+    }
+}
+
+.delete-btn {
+    background-color: #e74c3c;
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+
+    &:hover {
+        background-color: #c0392b;
+    }
+}
+
+.update-btn {
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}

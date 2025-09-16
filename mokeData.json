@@ -1,0 +1,43 @@
+[
+    {
+      "title": "The Power of Mindful Living",
+      "content": "Mindfulness is the practice of being fully present in the moment. It reduces stress, improves focus, and enhances overall well-being...",
+      "author": "Jane Doe",
+      "image": "https://source.unsplash.com/random/800x600?mindfulness",
+      "tags": ["lifestyle", "mental health", "productivity"],
+      "createdAt": "2025-06-01T10:30:00.000Z"
+    },
+    {
+      "title": "Top 10 JavaScript Tips for Beginners",
+      "content": "Learning JavaScript can be overwhelming, but these tips will help beginners avoid common pitfalls and build strong coding habits...",
+      "author": "John Smith",
+      "image": "https://source.unsplash.com/random/800x600?javascript,code",
+      "tags": ["javascript", "programming", "web development"],
+      "createdAt": "2025-06-03T14:45:00.000Z"
+    },
+    {
+      "title": "A Guide to Healthy Meal Planning",
+      "content": "Planning your meals ahead of time can save you money and improve your health. This guide will walk you through everything you need to know...",
+      "author": "Emily Clark",
+      "image": "https://source.unsplash.com/random/800x600?healthy,food",
+      "tags": ["health", "nutrition", "lifestyle"],
+      "createdAt": "2025-06-04T08:15:00.000Z"
+    },
+    {
+      "title": "Exploring the Beauty of the Himalayas",
+      "content": "The Himalayas offer breathtaking landscapes, cultural diversity, and thrilling adventures. Here’s why it should be your next travel destination...",
+      "author": "Amit Kumar",
+      "image": "https://source.unsplash.com/random/800x600?himalayas,mountain",
+      "tags": ["travel", "adventure", "nature"],
+      "createdAt": "2025-06-05T16:20:00.000Z"
+    },
+    {
+      "title": "Why You Should Start Investing Early",
+      "content": "Investing early allows you to take advantage of compounding returns. Learn why even small amounts can grow significantly over time...",
+      "author": "Priya Sharma",
+      "image": "https://source.unsplash.com/random/800x600?investment,finance",
+      "tags": ["finance", "investing", "personal growth"],
+      "createdAt": "2025-06-06T12:00:00.000Z"
+    }
+  ]
+  

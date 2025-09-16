@@ -1,0 +1,64 @@
+.post-card {
+    background-color: #212131;
+    color: #f1f1f1;
+    padding: 1.8rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+  
+    &:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+    }
+  }
+  
+  .post-header {
+    margin-bottom: 1rem;
+  }
+  
+  .post-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.4rem;
+    color: #00d1b2;
+  }
+  
+  .post-meta {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+    color: #bbbbbb;
+  
+    .post-author,
+    .post-email,
+    .post-date {
+      margin-top: 2px;
+    }
+  
+    .post-date {
+      font-style: italic;
+      color: #a0a0a0;
+    }
+  }
+  
+  .post-excerpt {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+    color: #dddddd;
+  }
+  
+  .read-more {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #00d1b2;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  
+    &:hover {
+      background-color: #00b59c;
+    }
+  }
+  

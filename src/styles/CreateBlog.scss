@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap');
+
+.create-blog {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    font-family: 'Roboto', sans-serif;
+
+    h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 2.8rem;
+        text-align: center;
+        color: #222;
+
+        span {
+            color: #ff5c5c; // Updated heading highlight color
+        }
+    }
+
+    form {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        label {
+            font-weight: bold;
+            color: #333;
+            font-size: 1rem;
+        }
+
+        input,
+        textarea {
+            padding: 0.75rem 1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-family: 'Roboto', sans-serif;
+            transition: border 0.3s;
+
+            &:focus {
+                border-color: #000; // Updated border color on focus
+                outline: none;
+            }
+        }
+
+        button {
+            background-color: #000; // Solid black
+            color: #fff;
+            padding: 0.75rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+
+            &::before {
+                content: "💾"; // Disk icon
+                font-size: 1.2rem;
+            }
+
+            &:hover {
+                background-color: #222;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .create-blog {
+        padding: 1rem;
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        form {
+            gap: 1rem;
+        }
+    }
+}
