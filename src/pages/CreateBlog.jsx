@@ -91,7 +91,7 @@ const CreateBlog = () => {
 
   return (
     <div className="create-blog">
-      <h1>{postId ? "✏️ Update" : "📢 Publish"} Your <span>Blog</span></h1>
+      <h1>{postId ? "✏️ Update" : "➕ Add"} Your <span>Blog</span></h1>
       <form onSubmit={handleSubmit}>
         <label>Title</label>
         <input

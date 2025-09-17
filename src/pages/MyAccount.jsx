@@ -74,7 +74,18 @@ const MyAccount = () => {
                 <Typography variant="body2" color="textSecondary">{user?.email}</Typography>
               </Box>
             </Box>
-            <Button variant="outlined" onClick={() => setIsEditing(true)}>Edit Profile</Button>
+            <Button variant="contained" onClick={() => setIsEditing(true)}
+              sx={{
+                background: 'linear-gradient(180deg, rgba(255,165,0,0.9), rgba(255,130,0,0.95))',
+                color: '#0b0f14',
+                border: '1px solid rgba(255,165,0,0.52)',
+                fontWeight: 800,
+                '&:hover': {
+                  filter: 'brightness(1.05)',
+                  boxShadow: '0 14px 30px rgba(255,165,0,0.28)'
+                }
+              }}
+            >Edit Profile</Button>
           </Box>
 
           {isEditing && (

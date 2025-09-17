@@ -8,6 +8,7 @@ import {
   Alert,
   CircularProgress,
 } from "@mui/material";
+import "../styles/Login.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { registerUser } from "../features/auth/authActions";
 import { useNavigate } from "react-router-dom";
@@ -44,53 +45,47 @@ const CreateAccount = () => {
   };
 
   return (
-    <Container maxWidth="sm">
-      <Box sx={{ mt: 5 }}>
-        <Typography variant="h4" gutterBottom>
-          Create Account
-        </Typography>
+    <div className="login-page">
+      <form className="login-form" onSubmit={handleSubmit}>
+        <h2 className="login-title">Create Account</h2>
+        <p className="login-subtitle">Join BLOGWEB to start posting</p>
 
-        {error && <Alert severity="error">{error}</Alert>}
-        <form onSubmit={handleSubmit}>
-          <TextField
-            label="username"
-            name="username"
-            fullWidth
-            margin="normal"
-            value={formData.username}
-            onChange={handleChange}
-          />
-          <TextField
-            label="Email"
-            name="email"
-            type="email"
-            fullWidth
-            margin="normal"
-            value={formData.email}
-            onChange={handleChange}
-          />
-          <TextField
-            label="Password"
-            name="password"
-            type="password"
-            fullWidth
-            margin="normal"
-            value={formData.password}
-            onChange={handleChange}
-          />
+        {error && <p className="login-error">{error}</p>}
 
-          <Button
-            type="submit"
-            variant="contained"
-            fullWidth
-            sx={{ mt: 2 }}
-            disabled={loading}
-          >
-            {loading ? <CircularProgress size={24} /> : "Create Account"}
-          </Button>
-        </form>
-      </Box>
-    </Container>
+        <input
+          className="login-input"
+          placeholder="Username"
+          name="username"
+          value={formData.username}
+          onChange={handleChange}
+          required
+        />
+
+        <input
+          className="login-input"
+          placeholder="Email"
+          type="email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          required
+        />
+
+        <input
+          className="login-input"
+          placeholder="Password"
+          type="password"
+          name="password"
+          value={formData.password}
+          onChange={handleChange}
+          required
+        />
+
+        <button className="login-button" type="submit" disabled={loading}>
+          {loading ? "Creating..." : "Sign Up"}
+        </button>
+      </form>
+    </div>
   );
 };
 

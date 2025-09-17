@@ -1,15 +1,19 @@
 .post-card {
-    background-color: #212131;
+    background: rgba(16, 22, 33, 0.6);
     color: #f1f1f1;
-    padding: 1.8rem;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    padding: 1.2rem;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     font-family: 'Poppins', sans-serif;
+    overflow: hidden; /* prevent children from overflowing */
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
   
     &:hover {
       transform: translateY(-6px);
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 12px 34px rgba(0, 0, 0, 0.45);
     }
   }
   
@@ -18,9 +22,10 @@
   }
   
   .post-title {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     margin-bottom: 0.4rem;
-    color: #00d1b2;
+    color: #ffa500;
+    word-break: break-word;
   }
   
   .post-meta {
@@ -46,19 +51,26 @@
     line-height: 1.6;
     margin-bottom: 1.2rem;
     color: #dddddd;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* clamp to 4 lines */
+    -webkit-box-orient: vertical;
+    word-break: break-word;
   }
   
   .read-more {
     text-decoration: none;
-    color: #ffffff;
-    background-color: #00d1b2;
+    color: #0b0f14;
+    background: linear-gradient(180deg, rgba(255, 165, 0, 0.9), rgba(255, 130, 0, 0.95));
     padding: 0.5rem 1rem;
-    border-radius: 8px;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
+    border: 1px solid rgba(255, 165, 0, 0.52);
+    border-radius: 10px;
+    font-weight: 700;
+    transition: filter 0.2s ease, box-shadow 0.2s ease;
   
     &:hover {
-      background-color: #00b59c;
+      filter: brightness(1.05);
+      box-shadow: 0 10px 24px rgba(255, 165, 0, 0.28);
     }
   }
   

@@ -1,22 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap');
 
 .create-blog {
-    max-width: 800px;
+    max-width: 880px;
     margin: 3rem auto;
     padding: 2rem;
-    background: #ffffff;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    border-radius: 12px;
+    background: rgba(16, 22, 33, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
+    border-radius: 14px;
     font-family: 'Roboto', sans-serif;
 
     h1 {
         font-family: 'Playfair Display', serif;
-        font-size: 2.8rem;
+        font-size: 2.2rem;
         text-align: center;
-        color: #222;
+        color: var(--text);
 
         span {
-            color: #ff5c5c; // Updated heading highlight color
+            color: #ffa500; // orange highlight
         }
     }
 
@@ -24,51 +25,52 @@
         margin-top: 2rem;
         display: flex;
         flex-direction: column;
-        gap: 1.5rem;
+        gap: 1rem;
 
         label {
-            font-weight: bold;
-            color: #333;
-            font-size: 1rem;
+            font-weight: 600;
+            color: var(--muted);
+            font-size: 0.95rem;
         }
 
         input,
         textarea {
-            padding: 0.75rem 1rem;
-            border: 2px solid #e0e0e0;
-            border-radius: 6px;
+            padding: 0.8rem 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 10px;
             font-size: 1rem;
             font-family: 'Roboto', sans-serif;
-            transition: border 0.3s;
+            color: var(--text);
+            background: rgba(255, 255, 255, 0.05);
+            transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 
+            &::placeholder { color: var(--muted); }
             &:focus {
-                border-color: #000; // Updated border color on focus
+                border-color: rgba(122, 162, 247, 0.55);
+                box-shadow: 0 0 0 4px rgba(122, 162, 247, 0.14);
                 outline: none;
+                background: rgba(255, 255, 255, 0.07);
             }
         }
 
         button {
-            background-color: #000; // Solid black
-            color: #fff;
-            padding: 0.75rem;
-            font-size: 1.1rem;
-            font-weight: bold;
-            border: none;
-            border-radius: 8px;
+            background: linear-gradient(180deg, rgba(255, 165, 0, 0.9), rgba(255, 130, 0, 0.95));
+            color: #0b0f14;
+            padding: 0.9rem;
+            font-size: 1.05rem;
+            font-weight: 800;
+            border: 1px solid rgba(255, 165, 0, 0.52);
+            border-radius: 12px;
             cursor: pointer;
-            transition: background-color 0.3s ease;
-            display: flex;
+            transition: filter 0.2s ease, box-shadow 0.2s ease;
+            display: inline-flex;
             justify-content: center;
             align-items: center;
             gap: 0.5rem;
 
-            &::before {
-                content: "💾"; // Disk icon
-                font-size: 1.2rem;
-            }
-
             &:hover {
-                background-color: #222;
+                filter: brightness(1.05);
+                box-shadow: 0 14px 30px rgba(255, 165, 0, 0.28);
             }
         }
     }

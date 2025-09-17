@@ -20,7 +20,7 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <Link to="/" className="logo" onClick={() => setMenuOpen(false)}>Bloggram</Link>
+      <Link to="/" className="logo" onClick={() => setMenuOpen(false)}>BLOGWEB</Link>
 
       <div className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
         ☰

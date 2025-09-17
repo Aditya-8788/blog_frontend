@@ -2,7 +2,9 @@
     padding: 2rem;
     position: relative;
     min-height: 100vh;
-    background-color: #f5f7fa;
+    background:
+        radial-gradient(800px 360px at 12% 0%, rgba(255, 165, 0, 0.10), transparent 60%),
+        radial-gradient(700px 320px at 100% 100%, rgba(255, 130, 0, 0.10), transparent 55%);
 
     .loading,
     .error {
@@ -13,9 +15,9 @@
     }
 
     .posts-wrapper {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1.25rem;
     }
 }
 
@@ -23,8 +25,8 @@
     position: fixed;
     bottom: 2rem;
     right: 2rem;
-    background-color: #0ad346;
-    color: white;
+    background: linear-gradient(180deg, rgba(255, 165, 0, 0.9), rgba(255, 130, 0, 0.95));
+    color: #0b0f14;
     // border-radius: 50px;
     padding: 0.75rem 1.5rem;
     font-size: 1.25rem;
@@ -32,7 +34,8 @@
     align-items: center;
     gap: 0.5rem;
     text-decoration: none;
-    box-shadow: 0 8px 20px rgba(185, 217, 1, 0.3);
+    border: 1px solid rgba(255, 165, 0, 0.52);
+    box-shadow: 0 14px 30px rgba(255, 165, 0, 0.28);
     transition: all 0.3s ease;
 
     .plus-icon {
@@ -51,7 +54,7 @@
 
     &:hover {
         // border-radius: 30px;
-
+        filter: brightness(1.05);
         .button-text {
             opacity: 1;
             max-width: 200px;
@@ -71,15 +74,26 @@
 
 .search-container {
     width: 300px;
-    margin: auto;
+    margin: 0 auto 1.5rem;
     text-align: center;
 
     input {
         width: 100%;
-        padding: 0.5rem;
-        border: 1px solid #ccc;
-        border-radius: 5px;
+        padding: 0.7rem 0.9rem;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.05);
+        color: var(--text);
         font-size: 1rem;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+
+        &::placeholder { color: var(--muted); }
+        &:focus {
+            border-color: rgba(122, 162, 247, 0.55);
+            box-shadow: 0 0 0 4px rgba(122, 162, 247, 0.14);
+            outline: none;
+            background: rgba(255, 255, 255, 0.07);
+        }
     }
 
     ul {
@@ -88,10 +102,12 @@
         margin-top: 10px;
 
         li {
-            padding: 5px;
-            background: #f1f1f1;
-            margin: 5px 0;
-            border-radius: 3px;
+            padding: 8px 10px;
+            background: rgba(16, 22, 33, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            margin: 6px 0;
+            border-radius: 10px;
+            color: var(--text);
         }
     }
 }

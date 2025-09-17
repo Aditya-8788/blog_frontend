@@ -4,20 +4,25 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
-    background: #1e1e2f;
+    padding: 0.8rem 2rem;
+    background: linear-gradient(180deg, rgba(255, 165, 0, 0.10), rgba(255, 165, 0, 0.06)),
+                linear-gradient(0deg, rgba(8, 12, 18, 0.3), rgba(8, 12, 18, 0.3));
     color: #f4f4f4;
     font-family: 'Segoe UI', sans-serif;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
     position: sticky;
     top: 0;
     z-index: 100;
 
     .logo {
         font-size: 1.8rem;
-        font-weight: bold;
-        color: #00d1b2;
+        font-weight: 800;
+        color: #ffa500; /* orange */
         text-decoration: none;
+        letter-spacing: 0.5px;
+        text-shadow: 0 4px 18px rgba(255, 165, 0, 0.25);
     }
 
     .menu-toggle {
@@ -44,8 +49,8 @@
                 transition: background 0.3s;
 
                 &:hover {
-                    background: #00d1b2;
-                    color: #1e1e2f;
+                    background: rgba(255, 165, 0, 0.18);
+                    color: #ffffff;
                 }
             }
 
@@ -55,6 +60,10 @@
                 border: none;
                 cursor: pointer;
                 font-size: 1rem;
+                border: 1px solid rgba(255, 165, 0, 0.52);
+                background: linear-gradient(180deg, rgba(255, 165, 0, 0.18), rgba(255, 130, 0, 0.18));
+                color: #ffffff;
+                border-radius: 10px;
             }
         }
 
